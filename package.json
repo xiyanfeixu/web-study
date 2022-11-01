@@ -1,0 +1,22 @@
+{
+  "name": "web-study",
+  "version": "1.0.0",
+  "description": "- proxy 替代 defineProperty 监听对象操作； - receiver 参数的作用；",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiyanfeixu/web-study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiyanfeixu/web-study/issues"
+  },
+  "homepage": "https://github.com/xiyanfeixu/web-study#readme",
+  "dependencies": {
+    "co": "^4.6.0"
+  }
+}
