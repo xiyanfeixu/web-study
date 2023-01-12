@@ -15,6 +15,10 @@ function App() {
     const action = { type: "add" };
     store.dispatch(action);
   };
+  const del = (idx) => {
+    const action = { type: "del", index: idx };
+    store.dispatch(action);
+  };
   const change = (e) => {
     const val = e.target.value;
     const action = {
@@ -35,7 +39,16 @@ function App() {
       </div>
       <List
         dataSource={data}
-        renderItem={(item) => <List.Item key={item}>{item}</List.Item>}
+        renderItem={(item, idx) => (
+          <List.Item
+            key={item}
+            onClick={() => {
+              del(idx);
+            }}
+          >
+            {item}
+          </List.Item>
+        )}
         bordered
       />
     </div>

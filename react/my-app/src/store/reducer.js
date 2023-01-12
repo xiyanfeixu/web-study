@@ -14,5 +14,9 @@ export default (state = defaultState, action) => {
     newState.val = "";
     return newState;
   }
+  if (action.type === "del") {
+    newState.data.splice(action.index, 1);
+    return newState;
+  }
   return state;
 };
