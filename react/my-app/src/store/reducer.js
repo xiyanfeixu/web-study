@@ -18,5 +18,9 @@ export default (state = defaultState, action) => {
     newState.data.splice(action.index, 1);
     return newState;
   }
+  if (action.type === "init") {
+    newState.data = action.value;
+    return newState;
+  }
   return state;
 };

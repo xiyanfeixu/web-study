@@ -3,6 +3,7 @@ import { Button, Input, List, Space } from "antd";
 import { useEffect, useState } from "react";
 import store from "./store";
 
+
 function App() {
   const [storeData, setStoreData] = useState(store.getState() || {});
   const { val, data } = storeData;
@@ -27,6 +28,11 @@ function App() {
     };
     store.dispatch(action);
   };
+
+  useEffect(() => {
+    const action = { type: "init-saga" };
+    store.dispatch(action);
+  }, []);
   return (
     <div className="App">
       <div>
